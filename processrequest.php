@@ -1,17 +1,12 @@
-<html>
+<?php
+session_start();
 
-<head>
-    <title>Hello World!</title>
-</head>
-<body>
+if (isset($_POST['username']) && isset($_POST['age'])) {
+    $_SESSION['username'] = $_POST["username"];
+    $_SESSION['age'] = $_POST["age"];
+}
 
-    <?php
-
-$username = $_POST["username"];
-echo "Hi, " . $username;
-echo "You are ". $age . "years old.";
-    
-
-    ?>
-</body>
-</html>
+if (isset($_GET['username']) && isset($_GET['age'])) {
+    $_SESSION['username'] = $_GET["username"];
+    $_SESSION['age'] = $_GET["age"];
+}

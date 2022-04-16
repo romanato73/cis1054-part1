@@ -1,17 +1,16 @@
-<html>
-
+<html lang="en">
 <head>
-    <title>Hello World!</title>
+    <title>Form</title>
 </head>
 <body>
- 
 
- <form action="processrequest.php" method="post">
-    Enter username: <input username="username" type="text">
+<form action="processrequest.php" method="post">
+    <label for="username">Enter username:</label>
+    <input name="username" id="username" type="text">
+    <label for="age">Enter age:</label>
+    <input name="age" id="age" type="number">
     <input type="submit">
-    Enter age: <input age="age" type="number">
-    <input type="submit">
- </form>
-        
+</form>
+
 </body>
 </html>
