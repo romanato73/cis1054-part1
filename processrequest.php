@@ -10,3 +10,5 @@ if (isset($_GET['username']) && isset($_GET['age'])) {
     $_SESSION['username'] = $_GET["username"];
     $_SESSION['age'] = $_GET["age"];
 }
+
+header('Location: /readsession.php');

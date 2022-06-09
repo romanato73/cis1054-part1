@@ -1,6 +1,9 @@
 <?php
     date_default_timezone_set('Europe/Berlin');
-    setcookie('lastvisited', date("G:i"), strtotime('Tomorrow'));
+
+    if (!isset($_COOKIE['lastvisited'])) {
+        setcookie('lastvisited', date("G:i"), strtotime('Tomorrow'));
+    }
 ?>
 
 <!DOCTYPE html>
@@ -14,12 +17,10 @@
 <body>
     <?php
 
-    if (isset($_COOKIE['lastvisited'])){
-
+    if (isset($_COOKIE['lastvisited'])) {
         $lastvisit = $_COOKIE['lastvisited'] ;
         echo "You last visited this page at ".$lastvisit;
-        
-    }else{
+    } else {
         echo "Welcome. This is your first time.";
     }
 
